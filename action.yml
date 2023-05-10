@@ -3,8 +3,7 @@ description: Builds client for a webapp
 inputs:
   client-dir:
     description: Directory for client
-    required: false
-    default: None
+    required: yes
   generate-type:
     description: Check to see if types need generating 
     required: false
