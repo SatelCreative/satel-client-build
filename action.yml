@@ -15,6 +15,6 @@ runs:
     - name: Build client
       env: 
         CLIENT_DIR: ${{ inputs.client-dir }}
-        $GEN_TYPE: ${{ inputs.generate-type }}
+        GEN_TYPE: ${{ inputs.generate-type }}
       run: ${{ github.action_path }}/DeployClient.sh
       shell: bash
