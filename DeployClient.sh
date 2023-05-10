@@ -1,15 +1,14 @@
 #!/bin/bash
-CLIENT=$1
-GEN_TYPE=$2
-
-# echo "GEN_TYPE=${GEN_TYPE}, CLIENT=${CLIENT}"
 
 echo "Build client"
-cd $CLIENT
+cd $CLIENT_DIR
+
 yarn install
 yarn lint
-if [[ $GEN_TYPE != None ]] 
+
+if [[ -n $GEN_TYPE ]]
 then
     yarn gen 
 fi   
+
 yarn build  
