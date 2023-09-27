@@ -11,6 +11,11 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: Set up node
+      uses: actions/setup-node@v3.8.1
+      with:
+        node-version: '14' 
+        
     - name: Build client
       env: 
         CLIENT_DIR: ${{ inputs.client-dir }}
